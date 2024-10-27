@@ -1,0 +1,61 @@
+/* blogspost rendering css */
+body{
+    background: rgb(229, 229, 229);
+}
+/* handle full card */
+.handle-layout-card{
+    display: flex;
+    justify-content: center;
+}
+/* to handle things inside card */
+.blog-main-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+    color: rgb(201, 201, 201);
+    /* background-color: rgb(210, 210, 210); */
+    background-color: rgb(20, 33, 61);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1000px;
+    height: auto;
+    padding: 40px;
+}
+/* childrens of card */
+.blog-category1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+.blog-title1{
+    display: flex;
+    justify-content: center;
+}
+.blog-author1{
+    display: flex;
+    justify-content: center;
+}
+.blog-date1{
+    display: flex;
+    justify-content: center;
+}
+.blog-content1{
+    display: flex;
+    justify-self: center;
+}
+
+
+/* style of go back button */
+.go-back-button{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 380px ;
+    padding-bottom: 30px;
+    size: 30px;
+}
+button{
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 1);
+    background-color: rgb(220, 220, 220);
+    font-family: Arial, Helvetica, sans-serif;
+}

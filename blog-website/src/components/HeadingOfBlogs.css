@@ -1,0 +1,22 @@
+
+body{
+    background: rgb(229, 229, 229);
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    background: rgb(229, 229, 229);
+    font-family: Arial;
+}
+.heading-line{
+    display: flex;
+    justify-content: center;
+    background: rgb(229, 229, 229);
+    font-family: Arial;
+    margin-bottom: 30px ;
+}
+
+.to-make-line{
+    border:1px solid rgb(207, 207, 207);
+}
+
