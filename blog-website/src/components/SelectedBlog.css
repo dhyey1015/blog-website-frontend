@@ -2,11 +2,13 @@
 body{
     background: rgb(229, 229, 229);
 }
+
 /* handle full card */
 .handle-layout-card{
     display: flex;
     justify-content: center;
 }
+
 /* to handle things inside card */
 .blog-main-card {
     border: 1px solid #ccc;
@@ -20,6 +22,7 @@ body{
     height: auto;
     padding: 40px;
 }
+
 /* childrens of card */
 .blog-category1{
     display: flex;

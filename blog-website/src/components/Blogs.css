@@ -12,21 +12,6 @@
     background-color: rgb(20, 33, 61);
     font-family: Arial;
 }
-
-/* blog and image main render style */
-.image-blog-container{
-    display: flex;
-    justify-content: space-between ;
-}
-
-.image-render{
-    margin-right: 70px;
-    margin-left: 100px;
-    margin-top: 50px ;
-    
-    
-}
-
 /* childs of Bloglist render */
 .blog-category{
     display: flex;
@@ -53,13 +38,29 @@
     justify-content: center;
 }
 
+
+/* blog and image main render style */
+.image-blog-container{
+    display: flex;
+    justify-content: space-between ;
+}
+
+.image-render{
+    margin-right: 70px;
+    margin-left: 100px;
+    margin-top: 50px ; 
+}
+
+
+/*handles the xml classes inside this BlogRenderInSingleCard()*/
 .blog-single-parent-card{
     display: flex;
     justify-content: center;
 }
+
 .blog-parent-card{
     border-radius: 5px;
     padding: 20px;
-    height: 709px;
-    overflow-y: auto;
+    height: 709px;  /*handles the vertical scrolling*/
+    overflow-y: auto; /*handles the vertical scrolling*/
 }

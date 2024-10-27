@@ -1,13 +1,16 @@
-
+/* handles the full page of html */
 body{
     background: rgb(229, 229, 229);
 }
+
+/* handles the headings */
 .heading{
     display: flex;
     justify-content: center;
     background: rgb(229, 229, 229);
     font-family: Arial;
 }
+/* handles the sub heading */
 .heading-line{
     display: flex;
     justify-content: center;
@@ -16,6 +19,7 @@ body{
     margin-bottom: 30px ;
 }
 
+/* thin line after sub heading */
 .to-make-line{
     border:1px solid rgb(207, 207, 207);
 }

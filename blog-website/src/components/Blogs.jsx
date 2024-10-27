@@ -37,9 +37,6 @@ function Blogs(){
               return <RenderBlogs key={blog.id} category={blog.category} title = {blog.title} author = {blog.author} date = {blog.date} content= {blog.content}></RenderBlogs>
             })}
           </div>
-          {/* <div className="image-render">
-            <RenderImage/>
-          </div> */}
         </div>
       )
 }
@@ -89,6 +86,5 @@ function BlogRenderInSingleCard(){
     
   )
 }
-
 
 export default BlogRenderInSingleCard;
