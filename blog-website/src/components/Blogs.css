@@ -2,43 +2,105 @@
 .main-card {
     border: 1px solid #ccc;
     border-radius: 30px;
-    padding: 25px;
+    padding: 35px;
     margin: auto;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 1);
     width: 300px;
     color: rgb(208, 208, 208);
     background-color: rgb(20, 33, 61);
     font-family: Arial;
+    cursor: pointer;
 }
+
+/* hovering effect on main card */
+.main-card:hover{
+    background-color: rgb(9, 21, 49);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+}
+
 .blog-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 40px;
 }
-/* childs of Bloglist render */
+/* childs of Bloglist blog-category */
 .blog-category{
     display: flex;
     justify-content: center;
+    
 }
+.blog-category span{
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 25px; 
+    border: 2px solid rgb(119, 119, 119);
+}
+
+/* childs of Bloglist blog-title */
 .blog-title{
     display: flex;
     justify-content: center;
+    font-weight: 1000;
+    /* color: rgb(184, 184, 184); */
+    color: white;
 }
-.blog-author{
+.blog-title h3{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* childs of Bloglist blog-author, blog-date */
+.blog-author, .blog-date{
     display: flex;
     justify-content: center;
+    color: #ffffff;
 }
-.blog-date{
-    display: flex;
-    justify-content: center;
+
+.blog-author b, .blog-date b {
+    color: rgb(184, 184, 184);
+    font-weight: 600;
 }
+/* childs of Bloglist blog-content*/
 .blog-content{
     display: flex;
     justify-content: center;
 }
+.blog-content article{
+    display: -webkit-box; /*handles the n line text to desired*/
+    -webkit-box-orient: vertical; /*handles the n line text to desired*/
+    -webkit-line-clamp: 4; /*handles the n line text to desired*/
+    overflow: hidden;
+    color: rgb(229, 231, 235);
+}
+
+/* childs of Bloglist blog-button*/
 .blog-button{
     display: flex;
     justify-content: center;
+}
+.card-button{
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-button:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
 }
 
 
@@ -71,7 +133,8 @@
 /* for tablet landscape */
 @media (max-width: 1366px) {
     .blog-container {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px 
     }
 }
 
@@ -79,13 +142,37 @@
 @media (max-width: 1024px) {
     .blog-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    .main-card {
+        padding: 17px;
     }
 }
 
 /* for phone potrait */
 @media (max-width: 600px) {
     .blog-container{
-        grid-template-columns: auto;
-        margin: auto;
+        grid-template-columns: 1fr;
+        /* margin: auto; */
+        padding: 15px;
+        gap: 17px
+    }
+
+    .main-card {
+        padding: 15px;
+    }
+    
+    .blog-title h3 {
+        font-size: 15px;
+    }
+    
+    .blog-content article {
+        font-size: 10px;
+    }
+    
+    .card-button {
+        padding: 8px 17px;
+        font-size: 10px;
     }
 }

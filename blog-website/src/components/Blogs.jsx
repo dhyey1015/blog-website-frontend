@@ -93,7 +93,7 @@ function RenderBlogs(props){
             </div>
             <br/>
             <div className="blog-button">
-              <button>Read More</button>
+              <button className="card-button">Read More</button>
             </div>
         </div>
     )
