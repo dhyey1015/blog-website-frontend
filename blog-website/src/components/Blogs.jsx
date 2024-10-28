@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import './Blogs.css'
 import RenderImage from "./RenderImage";
 
@@ -65,7 +66,16 @@ function Blogs(){
       return(
         <div className="blog-container">
             {blogs.map(function(blog){
-              return <RenderBlogs key={blog.id} category={blog.category} title = {blog.title} author = {blog.author} date = {blog.date} content= {blog.content}></RenderBlogs>
+              return <RenderBlogs 
+              key={blog.id} 
+              id={blog.id} 
+              category={blog.category} 
+              title = {blog.title} 
+              author = {blog.author} 
+              date = {blog.date} 
+              content= {blog.content}>
+
+              </RenderBlogs>
             })}
         </div>
       )
@@ -92,8 +102,13 @@ function RenderBlogs(props){
               <article>{props.content}</article>
             </div>
             <br/>
-            <div className="blog-button">
+            {/* <div className="blog-button">
               <button className="card-button">Read More</button>
+            </div> */}
+            <div className="blog-button">
+              <Link to={`/blog/${props.id}`} className="card-button">
+                  Read More
+              </Link>
             </div>
         </div>
     )
@@ -103,7 +118,6 @@ function BlogRenderInSingleCard(){
   
   return(
     <div className="blog-single-parent-card">
-
       <div className="blog-parent-card">
         <Blogs/>
       </div>
