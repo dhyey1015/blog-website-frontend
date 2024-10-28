@@ -1,64 +1,99 @@
-/* blogspost rendering css */
-body{
+/* controls the style out side the card */
+.blog-container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
     background: rgb(229, 229, 229);
 }
 
-/* handle full card */
-.handle-layout-card{
-    display: flex;
-    justify-content: center;
-}
-
-/* to handle things inside card */
-.blog-main-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
-    color: rgb(201, 201, 201);
-    /* background-color: rgb(210, 210, 210); */
-    background-color: rgb(20, 33, 61);
-    font-family: Arial, Helvetica, sans-serif;
-    width: 1000px;
-    height: auto;
+/* controls the style of card */
+.blog-card{
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 40px;
 }
 
-/* childrens of card */
+/* its the parent div of the childs of the class */
+.blog-card-header{
+    border-bottom: 1px solid rgb(193, 193, 193);
+}
+/* handles the category child */
 .blog-category1{
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-}
-.blog-title1{
-    display: flex;
-    justify-content: center;
-}
-.blog-author1{
-    display: flex;
-    justify-content: center;
-}
-.blog-date1{
-    display: flex;
-    justify-content: center;
-}
-.blog-content1{
-    display: flex;
-    justify-self: center;
-}
-
-
-/* style of go back button */
-.go-back-button{
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 380px ;
-    padding-bottom: 30px;
-    size: 30px;
-}
-/* button{
     font-size: 30px;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 1);
-    background-color: rgb(220, 220, 220);
-    font-family: Arial, Helvetica, sans-serif;
-} */
+    font-weight: 500px;
+    color: rgb(118, 122, 142);
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+/* handles the title child */
+.blog-title1{
+    font-size: 30px;
+    font-weight: 700px;
+    color: rgb(34, 39, 66);
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.blog-author1-date1{
+    font-size: 20px;
+    color: #6b7280;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(193, 193, 193);
+}
+.blog-author1-date1 b{
+    color: rgb(87, 87, 87);
+}
+
+.blog-content1 p{
+    font-size: 20px;
+    font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* handles the button div */
+.go-back-button {
+    padding-bottom: 20px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.go-back-button button {
+    font-size: 20px;
+    font-weight: 600;
+    color: blue;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.arrow{
+    /* border: solid rgb(17, 0, 255); */
+    border: solid blue;
+    border-width: 0px 3px 3px 0px ;
+    display: inline-block;
+    padding: 5px;
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.image-class{
+    display: flex;
+    justify-content: center;
+}
+
+.video-class{
+    display: flex;
+    justify-content: center;
+    
+}
+.video-class video{
+    width: 500px;
+    height: 500px;
+}
+
