@@ -27,16 +27,46 @@ function Blogs(){
           date: "2024-10-26",
           category: "Development",
           content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
+        },
+        {
+          id: 4,
+          title: "Web Development Best Practices",
+          author: "Alex Johnson",
+          date: "2024-10-26",
+          category: "Development",
+          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
+        },
+        {
+          id: 5,
+          title: "Web Development Best Practices",
+          author: "Alex Johnson",
+          date: "2024-10-26",
+          category: "Development",
+          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
+        },
+        {
+          id: 6,
+          title: "Web Development Best Practices",
+          author: "Alex Johnson",
+          date: "2024-10-26",
+          category: "Development",
+          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
+        },
+        {
+          id: 7,
+          title: "Web Development Best Practices",
+          author: "Alex Johnson",
+          date: "2024-10-26",
+          category: "Development",
+          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
         }
       ];
 
       return(
-        <div className="image-blog-container">
-          <div>
+        <div className="blog-container">
             {blogs.map(function(blog){
               return <RenderBlogs key={blog.id} category={blog.category} title = {blog.title} author = {blog.author} date = {blog.date} content= {blog.content}></RenderBlogs>
             })}
-          </div>
         </div>
       )
 }
@@ -59,7 +89,7 @@ function RenderBlogs(props){
             </div>
             <br />
             <div className="blog-content">
-              <b>Content: </b>{props.content}
+              <article>{props.content}</article>
             </div>
             <br/>
             <div className="blog-button">
@@ -77,11 +107,6 @@ function BlogRenderInSingleCard(){
       <div className="blog-parent-card">
         <Blogs/>
       </div>
-
-      <div className="image-render">
-          <RenderImage/>
-      </div>
-
     </div>
     
   )

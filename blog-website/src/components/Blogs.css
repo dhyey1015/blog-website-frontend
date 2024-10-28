@@ -2,15 +2,18 @@
 .main-card {
     border: 1px solid #ccc;
     border-radius: 30px;
-    padding: 20px;
-    /* margin-left: auto; */
-    margin-bottom: 40px;
-    margin-top: 20px;
+    padding: 25px;
+    margin: auto;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 1);
-    width: 800px;
+    width: 300px;
     color: rgb(208, 208, 208);
     background-color: rgb(20, 33, 61);
     font-family: Arial;
+}
+.blog-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 /* childs of Bloglist render */
 .blog-category{
@@ -31,7 +34,7 @@
 }
 .blog-content{
     display: flex;
-    justify-self: center;
+    justify-content: center;
 }
 .blog-button{
     display: flex;
@@ -40,7 +43,7 @@
 
 
 /* blog and image main render style */
-.image-blog-container{
+/* .image-blog-container{
     display: flex;
     justify-content: space-between ;
 }
@@ -49,18 +52,40 @@
     margin-right: 70px;
     margin-left: 100px;
     margin-top: 50px ; 
-}
+} */
 
 
 /*handles the xml classes inside this BlogRenderInSingleCard()*/
 .blog-single-parent-card{
     display: flex;
     justify-content: center;
+    height: 100%;  /*handles the vertical scrolling*/
+    overflow-y: auto; /*handles the vertical scrolling*/
 }
 
 .blog-parent-card{
     border-radius: 5px;
-    padding: 20px;
-    height: 709px;  /*handles the vertical scrolling*/
-    overflow-y: auto; /*handles the vertical scrolling*/
+    padding: 20px;  
+}
+
+/* for tablet landscape */
+@media (max-width: 1366px) {
+    .blog-container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+/* for tablets portrait */
+@media (max-width: 1024px) {
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* for phone potrait */
+@media (max-width: 600px) {
+    .blog-container{
+        grid-template-columns: auto;
+        margin: auto;
+    }
 }
