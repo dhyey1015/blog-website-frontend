@@ -9,6 +9,7 @@
     color: rgb(208, 208, 208);
     background-color: rgb(20, 33, 61);
     font-family: Arial;
+    animation: pulse 3s infinite;
 }
 
 /* hovering effect on main card */
@@ -120,7 +121,8 @@
 .blog-single-parent-card{
     display: flex;
     justify-content: center;
-    height: 100%;  /*handles the vertical scrolling*/
+    height: 100%;
+    max-height: 709px;  /*handles the vertical scrolling*/
     overflow-y: auto; /*handles the vertical scrolling*/
 }
 
@@ -173,5 +175,18 @@
     .card-button {
         padding: 8px 17px;
         font-size: 10px;
+    }
+}
+
+/* animations */
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
     }
 }

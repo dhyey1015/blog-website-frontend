@@ -60,6 +60,30 @@ function Blogs(){
           date: "2024-10-26",
           category: "Development",
           content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
+        },
+        {
+          id: 8,
+          title: "Web Development Best Practices",
+          author: "Alex Johnson",
+          date: "2024-10-26",
+          category: "Development",
+          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
+        },
+        {
+          id: 9,
+          title: "Web Development Best Practices",
+          author: "Alex Johnson",
+          date: "2024-10-26",
+          category: "Development",
+          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
+        },
+        {
+          id: 10,
+          title: "Web Development Best Practices",
+          author: "Alex Johnson",
+          date: "2024-10-26",
+          category: "Development",
+          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
         }
       ];
 
