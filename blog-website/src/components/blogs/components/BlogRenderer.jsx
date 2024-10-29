@@ -1,4 +1,4 @@
-
+// ./blog-website/src/components/BlogRenderer.jsx
 import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown'; // converts the markdown to xml
 import yaml from 'js-yaml'; // used to load data inside a variable
