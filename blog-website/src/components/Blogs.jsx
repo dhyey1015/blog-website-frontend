@@ -1,106 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import './Blogs.css'
 import RenderImage from "./RenderImage";
+import { blogs } from '../data/blogsdata.js';
+import yaml from 'js-yaml';
 
 function Blogs(){
-    const blogs = [
-        {
-          id: 1,
-          title: "Getting Started with React",
-          author: "Jane Doe",
-          date: "2024-10-20",
-          category: "Development",
-          content: "React is a powerful library for building user interfaces. In this blog post, we'll explore the fundamentals of React and how to get started with your first React application. We'll cover components, state management, and basic hooks that every React developer should know."
-        },
-        {
-          id: 2,
-          title: "The Future of AI",
-          author: "John Smith",
-          date: "2024-10-25",
-          category: "Technology",
-          content: "Artificial Intelligence is rapidly evolving and changing the way we live and work. This post explores current AI trends and makes predictions about where the technology is headed in the next decade. We'll discuss machine learning, neural networks, and their practical applications."
-        },
-        {
-          id: 3,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        },
-        {
-          id: 4,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        },
-        {
-          id: 5,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        },
-        {
-          id: 6,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        },
-        {
-          id: 7,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        },
-        {
-          id: 8,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        },
-        {
-          id: 9,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        },
-        {
-          id: 10,
-          title: "Web Development Best Practices",
-          author: "Alex Johnson",
-          date: "2024-10-26",
-          category: "Development",
-          content: "Following web development best practices is crucial for creating maintainable and scalable applications. In this comprehensive guide, we'll cover everything from code organization to performance optimization techniques that will help you build better web applications."
-        }
-      ];
+
+  const [metadata, setMetadata] = useState([])
+  useEffect(function(){
+      const fetchBlogs = async () =>{
+        const allMetadata = await Promise.all(
+          blogs.map(async (blog) => {
+            const response = await fetch(`/data/content/blog${blog.id}.md`)
+            const text = await response.text()
+            const part = text.split('---')
+            if(part.length >= 3){
+              return yaml.load(part[1])
+            }
+            return null
+          })
+        )
+        setMetadata(allMetadata.filter(Boolean))
+      }
+      fetchBlogs()
+  },[])
 
       return(
         <div className="blog-container">
-            {blogs.map(function(blog){
-              return <RenderBlogs 
-              key={blog.id} 
-              id={blog.id} 
-              category={blog.category} 
-              title = {blog.title} 
-              author = {blog.author} 
-              date = {blog.date} 
-              content= {blog.content}>
-
-              </RenderBlogs>
-            })}
+            {metadata.map((meta) => (
+                <RenderBlogs 
+                    key={meta.id} 
+                    id={meta.id} 
+                    category={meta.category} 
+                    title={meta.title} 
+                    author={meta.author} 
+                    date={meta.date} 
+                    content={meta.description} 
+                />
+            ))}
         </div>
       )
 }
@@ -126,9 +64,6 @@ function RenderBlogs(props){
               <article>{props.content}</article>
             </div>
             <br/>
-            {/* <div className="blog-button">
-              <button className="card-button">Read More</button>
-            </div> */}
             <div className="blog-button">
               <Link to={`/blog/${props.id}`} className="card-button">
                   Read More

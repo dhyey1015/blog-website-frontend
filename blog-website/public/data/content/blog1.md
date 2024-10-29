@@ -1,4 +1,6 @@
 ---
+id: 1
+category: Development
 title: "Exploring Markdown Features"
 author: "John Doe"
 date: "2024-10-29"
