@@ -7,13 +7,13 @@ date: "2024-10-29"
 description: "A comprehensive guide to using Markdown with various media types."
 ---
 
-# Exploring Markdown Features
+# Markdown Features
 
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. In this guide, we will explore various features of Markdown including images, videos, code snippets, and more.
 
 ## Table of Contents
 
-- [Exploring Markdown Features](#exploring-markdown-features)
+- [Markdown Features](#markdown-features)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
   - [Images](#images)

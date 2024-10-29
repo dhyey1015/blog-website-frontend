@@ -28,47 +28,6 @@ function SelectedBlog(){
                 <div className="go-back-button">
                     <i className="arrow left"></i><button onClick={() => navigate(-1)}> Go Back</button>
                 </div>
-                
-               {/* <div className="blog-card-header">
-                    <div className="blog-category1">
-                        <span>
-                            {blog.category}
-                        </span>
-                    </div>
-                    <div className="blog-title1">
-                        <h3>{blog.title}</h3>
-                    </div>
-                    <div className="blog-author1-date1">
-                        <span><b>By</b> {blog.author} | <b>Date:</b> {blog.date}</span>
-                    </div>
-                    <br />
-                    <div className="blog-content1">
-                        <p>{blog.content}</p>
-                    </div>
-                    <SyntaxHighlighter language="javascript" style={atomOneLight}>
-                        {blog.codeString}
-                    </SyntaxHighlighter>
-                    <div className="blog-content1">
-                        <p>{blog.content}</p>
-                    </div>
-                    <div className="image-class">
-                        <img  src={random} alt="" />
-                    </div>
-                    <div className="blog-content1">
-                        <p>{blog.content}</p>
-                    </div>
-                    <div className="video-class">
-                        <video autoPlay loop muted controls width="100%">
-                            <source src={video} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div className="blog-content1">
-                        <BlogRenderer/>
-                    </div>
-                   
-                    <br/>
-                </div> */}
                 <div>
                     <BlogRenderer id={id} />
                 </div>
