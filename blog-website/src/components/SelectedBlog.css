@@ -1,7 +1,7 @@
 /* controls the style out side the card */
 .blog-container1{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -58,15 +58,16 @@
 .go-back-button {
     padding-bottom: 20px;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
 }
 
 .go-back-button button {
+    border: none;
     font-size: 20px;
     font-weight: 600;
     color: blue;
     background-color: transparent;
     border: none;
-    cursor: pointer;
     transition: color 0.3s;
 }
 
