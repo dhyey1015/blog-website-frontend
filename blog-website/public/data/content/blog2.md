@@ -11,12 +11,11 @@ Markdown is a lightweight markup language that you can use to add formatting ele
 
 ## Table of Contents
 
-- [Exploring Markdown Features](#exploring-markdown-features)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Images](#images)
-  - [Code Snippets](#code-snippets)
-  - [Videos](#videos)
+1. [Introduction](#introduction)
+2. [Images](#images)
+3. [Videos](#videos)
+4. [Code Snippets](#code-snippets)
+5. [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -24,34 +23,14 @@ Markdown is widely used for creating rich text using a plain text editor. It is 
 
 ## Images
 
-You can include images in your Markdown documents. Here's an example:
+You can include images in your Markdown documents. Here’s an example:
 
 ![Markdown Logo](https://markdown-here.com/img/icon256.png)
 
 This image shows the logo of Markdown.
 
-## Code Snippets
-
-You can add code snippets in Markdown using triple backticks for a code block. Here's an example in JavaScript:
-
-```javascript
-function greet() {
-    console.log("Hello, world!");
-}
-```
-
 ## Videos
 
 Markdown doesn't natively support video embedding, but you can include HTML tags for this purpose. Here's an example using an embedded YouTube video:
 
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/EXAMPLE_VIDEO_ID" 
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
-
-
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=gT1v33oA1gI&t=924s" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted

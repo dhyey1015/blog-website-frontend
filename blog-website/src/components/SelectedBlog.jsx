@@ -21,6 +21,7 @@ function SelectedBlog(){
     if (!blog) {
         return <div>Blog post not found</div>;
     }
+
     return(
         <div className="blog-container1" >
             <div className="blog-card">
@@ -69,7 +70,7 @@ function SelectedBlog(){
                     <br/>
                 </div> */}
                 <div>
-                    <BlogRenderer/>
+                    <BlogRenderer id={id} />
                 </div>
 
             </div>
