@@ -16,7 +16,6 @@ Markdown is a lightweight markup language that you can use to add formatting ele
   - [Introduction](#introduction)
   - [Images](#images)
   - [Code Snippets](#code-snippets)
-  - [Videos](#videos)
 
 ## Introduction
 
@@ -40,17 +39,7 @@ function greet() {
 }
 ```
 
-## Videos
 
-Markdown doesn't natively support video embedding, but you can include HTML tags for this purpose. Here's an example using an embedded YouTube video:
-
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/EXAMPLE_VIDEO_ID" 
-    frameborder="0" 
-    allowfullscreen>
-</iframe>
 
 
 
